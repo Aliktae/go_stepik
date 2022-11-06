@@ -1,19 +1,3 @@
-//Даны два числа. Определить цифры, входящие в запись как первого, так и второго числа.
-//
-//Входные данные
-//Программа получает на вход два числа. Гарантируется, что цифры в числах не повторяются.
-//	Числа в пределах от 0 до 10000.
-//
-//Выходные данные
-//Программа должна вывести цифры, которые имеются в обоих числах, через пробел.
-//	Цифры выводятся в порядке их нахождения в первом числе.
-//
-//Sample Input:
-//564 8954
-//
-//Sample Output:
-//5 4
-
 package main
 
 import "fmt"
@@ -65,25 +49,25 @@ func main() {
 		fmt.Print(firstDigitFirst, " ")
 	}
 
-	if secondDigitFirst == firstDigitSecond ||
-		secondDigitFirst == secondDigitSecond ||
-		secondDigitFirst == thirdDigitSecond ||
-		secondDigitFirst == fourthDigitSecond {
+	if secondDigitFirst != 0 && secondDigitFirst == firstDigitSecond ||
+		secondDigitFirst != 0 && secondDigitFirst == secondDigitSecond ||
+		secondDigitFirst != 0 && secondDigitFirst == thirdDigitSecond ||
+		secondDigitFirst != 0 && secondDigitFirst == fourthDigitSecond {
 		fmt.Print(secondDigitFirst, " ")
 	}
 
-	if thirdDigitFirst == firstDigitSecond ||
-		thirdDigitFirst == secondDigitSecond ||
-		thirdDigitFirst == thirdDigitSecond ||
-		thirdDigitFirst == fourthDigitSecond {
+	if thirdDigitFirst != 0 && thirdDigitFirst == firstDigitSecond ||
+		thirdDigitFirst != 0 && thirdDigitFirst == secondDigitSecond ||
+		thirdDigitFirst != 0 && thirdDigitFirst == thirdDigitSecond ||
+		thirdDigitFirst != 0 && thirdDigitFirst == fourthDigitSecond {
 		fmt.Print(thirdDigitFirst, " ")
 	}
 
-	if fourthDigitFirst == firstDigitSecond ||
-		fourthDigitFirst == secondDigitSecond ||
-		fourthDigitFirst == thirdDigitSecond ||
-		fourthDigitFirst == fourthDigitSecond {
-		fmt.Print(fourthDigitFirst, " ")
+	if fourthDigitFirst != 0 && fourthDigitFirst == firstDigitSecond ||
+		fourthDigitFirst != 0 && fourthDigitFirst == secondDigitSecond ||
+		fourthDigitFirst != 0 && fourthDigitFirst == thirdDigitSecond ||
+		fourthDigitFirst != 0 && fourthDigitFirst == fourthDigitSecond {
+		fmt.Print(fourthDigitFirst)
 	}
 
 }
